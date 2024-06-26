@@ -35,8 +35,9 @@ class _Autoformer(nn.Module):
         self.saits_embedding = SaitsEmbedding(
             n_features * 2,
             d_model,
-            with_pos=False,
+            with_pos=True,
             dropout=dropout,
+            n_max_steps=n_steps
         )
         self.encoder = AutoformerEncoder(
             n_layers,
