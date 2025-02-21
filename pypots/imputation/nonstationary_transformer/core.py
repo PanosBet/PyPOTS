@@ -42,6 +42,7 @@ class _NonstationaryTransformer(nn.Module):
             d_model,
             with_pos=True,
             dropout=dropout,
+            n_max_steps=n_steps
         )
         self.encoder = NonstationaryTransformerEncoder(
             n_layers,
